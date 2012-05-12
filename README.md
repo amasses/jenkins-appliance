@@ -6,4 +6,4 @@ pundler can be found at https://github.com/rodjek/bundler-puppet and is extremel
     git clone git@github.com:aussielunix/jenkins-appliance.git
     cd jenkins-appliance
     pundle install
-    puppet apply init.pp
+    sudo puppet apply --modulepath=modules init.pp

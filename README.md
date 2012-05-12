@@ -2,10 +2,11 @@
 
 This is a JenkinsCI appliance built using puppet, some modules in github and some POC (_read dirty_) hacks to bundler.  
 
+http://vimeo.com/aussielunix/puppet-bundler-poc1
 
 ## Notes
 
-This make use of a proof of concept hack to bundler directly.  
+This makes use of a proof of concept hack to bundler directly.  
 
 To see this appliance in action you will need a new Ubuntu VM with git, ruby and modern rubygems.
 DO NOT INSTALL BUNDLER.

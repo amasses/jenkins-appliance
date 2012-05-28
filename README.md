@@ -10,6 +10,17 @@ This is currently in proof of concept stages.
 
 To see this appliance in action you will need a new Ubuntu VM with git, ruby and modern rubygems.
 
+## Build the appliance
+
+    # grab the jenkins appliance source
+    git clone git@github.com:aussielunix/jenkins-appliance.git
+    cd jenkins-appliance
+    # drag in all needed modules
+    pundle install
+    sudo puppet apply --modulepath=modules init.pp
+
+That's it. You should now have a working Jenkins CI server available on port :8080  
+
 ## Prep VM
 
 These _prep_ steps are only needed whilst this is proof of concept.  
@@ -30,13 +41,4 @@ The aim is to have this idea merged into bundler / puppet module tool.
 
     # add rubygems to your $PATH
     export PATH=$PATH:/var/lib/gems/1.8/bin/
-
-## Build the appliance
-
-    # grab the jenkins appliance source
-    git clone git@github.com:aussielunix/jenkins-appliance.git
-    cd jenkins-appliance
-    # drag in all needed modules
-    pundle install
-    sudo puppet apply --modulepath=modules init.pp
 

@@ -2,7 +2,20 @@ node default {
   include apt
   include stdlib
   include jenkins
+  include rvm
 
+
+  exec { "apt-get update":
+      command => "/usr/bin/apt-get update"
+  }
+
+  rvm::system_user { vagrant: ; }
+
+  rvm_system_ruby {
+  'ruby-1.9.3':
+    ensure => 'present',
+    default_use => true;
+  }
 
   $plugins = [ 
     'git',
@@ -27,4 +40,6 @@ node default {
   ]
 
   jenkins::plugin::install { $plugins: }
+
+
 }

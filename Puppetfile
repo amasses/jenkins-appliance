@@ -6,3 +6,6 @@ mod "stdlib",
 
 mod "jenkins",
   :git => "git://github.com/rtyler/puppet-jenkins.git"
+
+mod "rvm",
+	:git => "git://github.com/blt04/puppet-rvm.git"
